@@ -7,8 +7,8 @@
 
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #f5f8fc;
-    color: #333;
+    background-color: #121212; /* Fondo oscuro */
+    color: #e0e0e0;
     line-height: 1.6;
 }
 
@@ -16,67 +16,68 @@ body {
 nav {
     position: sticky;
     top: 0;
-    background: linear-gradient(90deg, #0a3d62, #2980b9);
+    background: linear-gradient(90deg, #0a0f24, #0f3057);
     text-align: center;
     padding: 15px;
     z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
 }
 
 nav a {
-    color: white;
-    margin: 0 12px;
+    color: #ffffff;
+    margin: 0 15px;
     text-decoration: none;
     font-weight: 600;
     padding: 8px 14px;
     border-radius: 6px;
-    transition: background 0.3s;
+    transition: background 0.3s, color 0.3s;
 }
 
 nav a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    color: #4db8ff;
 }
 
 /* -------- PORTADA -------- */
 .portada {
-    background: linear-gradient(135deg, #0a3d62, #2980b9);
+    background: linear-gradient(135deg, #0a0f24, #1b3c73);
     color: white;
     text-align: center;
     padding: 120px 20px;
-    border-bottom-left-radius: 50% 10%;
-    border-bottom-right-radius: 50% 10%;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    border-bottom: 3px solid #1b3c73;
 }
 
 .portada h1 {
     font-size: 3.2em;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    color: #4db8ff;
 }
 
 .portada p {
     font-size: 1.2em;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 /* -------- SECCIONES -------- */
 section {
-    padding: 50px 20px;
+    padding: 60px 20px;
     max-width: 1000px;
     margin: auto;
 }
 
 section h2 {
     font-size: 2em;
-    color: #0a3d62;
+    color: #4db8ff;
     margin-bottom: 20px;
     text-align: center;
 }
 
 /* -------- ALGORITMOS -------- */
 .algoritmo {
-    background: #ffffff;
+    background: #1e1e1e;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
     margin-bottom: 25px;
     transition: transform 0.3s;
 }
@@ -86,41 +87,25 @@ section h2 {
 }
 
 .algoritmo h3 {
-    color: #2980b9;
+    color: #4db8ff;
     margin-bottom: 10px;
 }
 
 pre {
-    background: #ecf0f1;
+    background: #2a2a2a;
+    color: #f8f8f2;
     padding: 12px;
     border-radius: 8px;
     overflow-x: auto;
 }
 
-/* -------- BOTONES -------- */
-button {
-    background: #2980b9;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.2s;
-}
-
-button:hover {
-    background: #0a3d62;
-    transform: scale(1.05);
-}
-
 /* -------- FOOTER -------- */
 footer {
-    background: #0a3d62;
-    color: white;
+    background: #0a0f24;
+    color: #cccccc;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
     font-size: 0.9em;
+    border-top: 2px solid #1b3c73;
 }
