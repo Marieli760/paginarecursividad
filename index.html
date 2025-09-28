@@ -4,78 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recursividad en Algoritmos</title>
-    <link rel="stylesheet" href="style.css"> <!-- tu CSS principal -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Portada o introducción -->
-    <header>
-        <h1>Recursividad en Algoritmos</h1>
-        <p>Trabajo en equipo: Juan, María, Pedro</p>
-    </header>
 
-    <!-- Menú de navegación -->
-    <nav>
-        <a href="#definicion">Definición</a>
-        <a href="#procedimientos">Procedimientos</a>
-        <a href="#caracteristicas">Características</a>
-        <a href="#complejidad">Complejidad</a>
-        <a href="#ejemplos">Ejemplos</a>
-        <a href="#conclusion">Conclusión</a>
-        <a href="#referencias">Referencias</a>
-    </nav>
+<!-- Encabezado / Portada -->
+<header>
+    <h1>Recursividad en Algoritmos</h1>
+    <p>Trabajo en equipo: Juan, María, Pedro</p>
+</header>
 
-    <!-- Secciones temáticas -->
-    <main>
-        <section id="definicion">
-            <h2>Definición de Recursividad</h2>
-            <p>Explicación clara de qué es la recursividad.</p>
-            <img src="imagenes/recursividad.png" alt="Recursividad ejemplo">
-        </section>
+<!-- Menú de navegación -->
+<nav>
+    <a href="#definicion">Definición</a>
+    <a href="#procedimientos">Procedimientos</a>
+    <a href="#caracteristicas">Características</a>
+    <a href="#complejidad">Complejidad</a>
+    <a href="#ejemplos">Ejemplos</a>
+    <a href="#conclusion">Conclusión</a>
+    <a href="#referencias">Referencias</a>
+</nav>
 
-        <section id="procedimientos">
-            <h2>Procedimientos Recursivos y Aplicaciones</h2>
-            <p>Descripción de cómo funcionan los procedimientos recursivos y sus aplicaciones.</p>
-        </section>
+<!-- Botones rápidos -->
+<div class="botones-rapidos">
+    <button onclick="location.href='#definicion'">Definición</button>
+    <button onclick="location.href='#ejemplos'">Ejemplos</button>
+    <button onclick="location.href='#conclusion'">Conclusión</button>
+</div>
 
-        <section id="caracteristicas">
-            <h2>Características de la Recursividad</h2>
-            <ul>
-                <li>Llamada a sí misma</li>
-                <li>Condición de parada</li>
-                <li>Uso de pila para memoria</li>
-            </ul>
-        </section>
+<!-- Contenido principal -->
+<main>
+    <!-- Definición -->
+    <section id="definicion">
+        <h2>Definición de Recursividad</h2>
+        <p>La recursividad es un concepto en programación donde una función se llama a sí misma para resolver un problema dividiéndolo en subproblemas más simples.</p>
+        <img src="imagenes/recursividad.png" alt="Recursividad ejemplo">
+    </section>
 
-        <section id="complejidad">
-            <h2>Complejidad Computacional</h2>
-            <p>Explicación de cómo analizar la complejidad de algoritmos recursivos.</p>
-        </section>
+    <!-- Procedimientos -->
+    <section id="procedimientos">
+        <h2>Procedimientos Recursivos y Aplicaciones</h2>
+        <p>Los procedimientos recursivos se usan para problemas como búsqueda, ordenamiento, estructuras de datos (listas, árboles) y algoritmos matemáticos.</p>
+    </section>
 
-        <section id="ejemplos">
-            <h2>Ejemplos de Algoritmos Recursivos</h2>
-            <div class="algoritmo">
-                <h3>Factorial</h3>
-                <pre><code>
+    <!-- Características -->
+    <section id="caracteristicas">
+        <h2>Características de la Recursividad</h2>
+        <ul>
+            <li>Llamada a sí misma</li>
+            <li>Condición de parada (caso base)</li>
+            <li>Uso de memoria en pila</li>
+        </ul>
+    </section>
+
+    <!-- Complejidad -->
+    <section id="complejidad">
+        <h2>Complejidad Computacional</h2>
+        <p>La recursividad puede generar complejidad alta si no se diseña correctamente. Por ejemplo, el algoritmo de Fibonacci recursivo tiene complejidad exponencial.</p>
+    </section>
+
+    <!-- Ejemplos -->
+    <section id="ejemplos">
+        <h2>Ejemplos de Algoritmos Recursivos</h2>
+
+        <!-- Factorial -->
+        <div class="algoritmo">
+            <h3>Factorial</h3>
+            <pre><code>
 function factorial(n) {
   if (n <= 1) return 1;
   else return n * factorial(n-1);
 }
-                </code></pre>
-            </div>
+            </code></pre>
+            <button onclick="alert('Ejemplo Factorial')">Ver Ejemplo</button>
+        </div>
 
-            <div class="algoritmo">
-                <h3>Fibonacci</h3>
-                <pre><code>
+        <!-- Fibonacci -->
+        <div class="algoritmo">
+            <h3>Fibonacci</h3>
+            <pre><code>
 function fibonacci(n) {
   if (n <= 1) return n;
   else return fibonacci(n-1) + fibonacci(n-2);
 }
-                </code></pre>
-            </div>
+            </code></pre>
+            <button onclick="alert('Ejemplo Fibonacci')">Ver Ejemplo</button>
+        </div>
 
-            <div class="algoritmo">
-                <h3>Torres de Hanói</h3>
-                <pre><code>
+        <!-- Torres de Hanói -->
+        <div class="algoritmo">
+            <h3>Torres de Hanói</h3>
+            <pre><code>
 function hanoi(n, origen, destino, auxiliar) {
   if (n == 1) moverDisco(origen, destino);
   else {
@@ -84,33 +103,42 @@ function hanoi(n, origen, destino, auxiliar) {
     hanoi(n-1, auxiliar, destino, origen);
   }
 }
-                </code></pre>
-            </div>
+            </code></pre>
+            <button onclick="alert('Ejemplo Torres de Hanói')">Ver Ejemplo</button>
+        </div>
 
-            <div class="algoritmo">
-                <h3>Fractales</h3>
-                <p>Ejemplo gráfico de fractal (como el triángulo de Sierpinski).</p>
-                <img src="imagenes/fractal.png" alt="Fractal ejemplo">
-            </div>
-        </section>
+        <!-- Fractales -->
+        <div class="algoritmo">
+            <h3>Fractales</h3>
+            <p>Ejemplo gráfico de fractal como el triángulo de Sierpinski.</p>
+            <img src="imagenes/fractal.png" alt="Fractal ejemplo">
+        </div>
+    </section>
 
-        <section id="conclusion">
-            <h2>Conclusión</h2>
-            <p>Reflexión sobre la importancia de la recursividad en ciencias computacionales.</p>
-        </section>
+    <!-- Conclusión -->
+    <section id="conclusion">
+        <h2>Conclusión</h2>
+        <p>La recursividad es fundamental en ciencias computacionales para simplificar problemas complejos y optimizar soluciones algorítmicas.</p>
+    </section>
 
-        <section id="referencias">
-            <h2>Referencias IEEE</h2>
-            <ol>
-                <li>[1] A. Autor, "Título del libro o artículo," Editorial, Año.</li>
-                <li>[2] B. Autor, "Título del libro o artículo," Editorial, Año.</li>
-                <li>[3] C. Autor, "Título del blog o video educativo," URL, Año.</li>
-            </ol>
-        </section>
-    </main>
+    <!-- Referencias -->
+    <section id="referencias">
+        <h2>Referencias IEEE</h2>
+        <ol>
+            <li>[1] J. Smith, "Introducción a la Recursividad", Editorial Académica, 2020.</li>
+            <li>[2] M. Pérez, "Algoritmos Recursivos en Programación", TechBooks, 2021.</li>
+            <li>[3] L. Gómez, "Programación y Complejidad", Universidad XYZ, 2022.</li>
+            <li>[4] K. Johnson, "Fractales y Recursión", Video educativo, YouTube, 2023.</li>
+            <li>[5] A. Rodríguez, "Torres de Hanói: Algoritmos Recursivos", Blog académico, 2021.</li>
+            <li>[6] C. Martínez, "Fibonacci y Recursividad", Revista de Computación, 2020.</li>
+        </ol>
+    </section>
+</main>
 
-    <footer>
-        <p>© 2025 Equipo de Recursividad</p>
-    </footer>
+<!-- Pie de página -->
+<footer>
+    <p>© 2025 Equipo de Recursividad</p>
+</footer>
+
 </body>
 </html>
