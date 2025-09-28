@@ -8,14 +8,7 @@
 </head>
 <body>
 
-<!-- Portada -->
-<section id="portada" class="portada">
-    <h1>Recursividad en Algoritmos</h1>
-    <p>Trabajo en equipo: Juan, María, Pedro</p>
-    <p>Explorando conceptos, características y ejemplos prácticos de recursividad en ciencias computacionales.</p>
-</section>
-
-<!-- Menú de navegación -->
+<!-- Menú -->
 <nav>
     <a href="#portada">Portada</a>
     <a href="#introduccion">Introducción</a>
@@ -28,47 +21,48 @@
     <a href="#referencias">Referencias</a>
 </nav>
 
-<!-- Botones rápidos -->
-<div class="botones-rapidos">
-    <button onclick="location.href='#definicion'">Definición</button>
-    <button onclick="location.href='#ejemplos'">Ejemplos</button>
-    <button onclick="location.href='#conclusion'">Conclusión</button>
-</div>
+<!-- Portada -->
+<header id="portada" class="portada">
+    <h1>Recursividad en Algoritmos</h1>
+    <p><strong>Alumno:</strong> Juan Pérez</p>
+    <p><strong>Profesor:</strong> Mtro. Carlos Ramírez</p>
+    <p><strong>Materia:</strong> Algoritmos y Estructuras de Datos</p>
+</header>
 
 <main>
     <!-- Introducción -->
     <section id="introduccion">
         <h2>Introducción</h2>
-        <p>En este trabajo se analiza la recursividad, un concepto clave en programación que permite a las funciones llamarse a sí mismas para resolver problemas complejos de manera elegante y estructurada. Se presentan ejemplos prácticos como el factorial, Fibonacci, Torres de Hanói y fractales, mostrando su relevancia y aplicaciones en ciencias computacionales.</p>
+        <p>La recursividad es un concepto clave en programación que permite a las funciones llamarse a sí mismas para resolver problemas complejos de manera elegante y estructurada. En este trabajo se presentan ejemplos prácticos como el factorial, Fibonacci, Torres de Hanói y fractales.</p>
     </section>
 
     <!-- Definición -->
     <section id="definicion">
         <h2>Definición de Recursividad</h2>
-        <p>La recursividad es un concepto en programación donde una función se llama a sí misma para resolver un problema dividiéndolo en subproblemas más simples.</p>
-        <img src="imagenes/recursividad.png" alt="Recursividad ejemplo">
+        <p>La recursividad es una técnica en programación en la que una función se llama a sí misma hasta alcanzar un caso base que detiene el proceso.</p>
+        <img src="imagenes/recursividad.png" alt="Ejemplo de recursividad" width="400">
     </section>
 
     <!-- Procedimientos -->
     <section id="procedimientos">
         <h2>Procedimientos Recursivos y Aplicaciones</h2>
-        <p>Los procedimientos recursivos se usan para problemas como búsqueda, ordenamiento, estructuras de datos (listas, árboles) y algoritmos matemáticos.</p>
+        <p>Se aplican en búsqueda, ordenamiento, estructuras como árboles y grafos, y en algoritmos matemáticos.</p>
     </section>
 
     <!-- Características -->
     <section id="caracteristicas">
-        <h2>Características de la Recursividad</h2>
+        <h2>Características</h2>
         <ul>
             <li>Llamada a sí misma</li>
-            <li>Condición de parada (caso base)</li>
-            <li>Uso de memoria en pila</li>
+            <li>Caso base definido</li>
+            <li>Uso de pila de memoria</li>
         </ul>
     </section>
 
     <!-- Complejidad -->
     <section id="complejidad">
         <h2>Complejidad Computacional</h2>
-        <p>La recursividad puede generar complejidad alta si no se diseña correctamente. Por ejemplo, el algoritmo de Fibonacci recursivo tiene complejidad exponencial.</p>
+        <p>Los algoritmos recursivos pueden ser ineficientes si no se optimizan. Ejemplo: Fibonacci simple tiene complejidad O(2^n), mientras que con memoización puede reducirse a O(n).</p>
     </section>
 
     <!-- Ejemplos -->
@@ -83,7 +77,6 @@ function factorial(n) {
   else return n * factorial(n-1);
 }
             </code></pre>
-            <button onclick="alert('Ejemplo Factorial')">Ver Ejemplo</button>
         </div>
 
         <div class="algoritmo">
@@ -94,7 +87,6 @@ function fibonacci(n) {
   else return fibonacci(n-1) + fibonacci(n-2);
 }
             </code></pre>
-            <button onclick="alert('Ejemplo Fibonacci')">Ver Ejemplo</button>
         </div>
 
         <div class="algoritmo">
@@ -109,20 +101,19 @@ function hanoi(n, origen, destino, auxiliar) {
   }
 }
             </code></pre>
-            <button onclick="alert('Ejemplo Torres de Hanói')">Ver Ejemplo</button>
         </div>
 
         <div class="algoritmo">
             <h3>Fractales</h3>
             <p>Ejemplo gráfico de fractal como el triángulo de Sierpinski.</p>
-            <img src="imagenes/fractal.png" alt="Fractal ejemplo">
+            <img src="imagenes/fractal.png" alt="Fractal ejemplo" width="350">
         </div>
     </section>
 
     <!-- Conclusión -->
     <section id="conclusion">
         <h2>Conclusión</h2>
-        <p>La recursividad es fundamental en ciencias computacionales para simplificar problemas complejos y optimizar soluciones algorítmicas.</p>
+        <p>La recursividad es esencial en ciencias computacionales, permitiendo simplificar problemas complejos y desarrollar algoritmos elegantes y potentes.</p>
     </section>
 
     <!-- Referencias -->
@@ -141,9 +132,8 @@ function hanoi(n, origen, destino, auxiliar) {
 
 <!-- Pie de página -->
 <footer>
-    <p>© 2025 Equipo de Recursividad</p>
+    <p>© 2025 Equipo de Recursividad | GitHub Pages</p>
 </footer>
 
 </body>
 </html>
-
