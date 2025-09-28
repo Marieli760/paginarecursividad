@@ -1,11 +1,116 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Mi Investigación</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursividad en Algoritmos</title>
+    <link rel="stylesheet" href="style.css"> <!-- tu CSS principal -->
 </head>
 <body>
-  <h1>Bienvenidos a mi investigación</h1>
-  <p>Este es mi sitio web hecho con GitHub Pages.</p>
+    <!-- Portada o introducción -->
+    <header>
+        <h1>Recursividad en Algoritmos</h1>
+        <p>Trabajo en equipo: Juan, María, Pedro</p>
+    </header>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <a href="#definicion">Definición</a>
+        <a href="#procedimientos">Procedimientos</a>
+        <a href="#caracteristicas">Características</a>
+        <a href="#complejidad">Complejidad</a>
+        <a href="#ejemplos">Ejemplos</a>
+        <a href="#conclusion">Conclusión</a>
+        <a href="#referencias">Referencias</a>
+    </nav>
+
+    <!-- Secciones temáticas -->
+    <main>
+        <section id="definicion">
+            <h2>Definición de Recursividad</h2>
+            <p>Explicación clara de qué es la recursividad.</p>
+            <img src="imagenes/recursividad.png" alt="Recursividad ejemplo">
+        </section>
+
+        <section id="procedimientos">
+            <h2>Procedimientos Recursivos y Aplicaciones</h2>
+            <p>Descripción de cómo funcionan los procedimientos recursivos y sus aplicaciones.</p>
+        </section>
+
+        <section id="caracteristicas">
+            <h2>Características de la Recursividad</h2>
+            <ul>
+                <li>Llamada a sí misma</li>
+                <li>Condición de parada</li>
+                <li>Uso de pila para memoria</li>
+            </ul>
+        </section>
+
+        <section id="complejidad">
+            <h2>Complejidad Computacional</h2>
+            <p>Explicación de cómo analizar la complejidad de algoritmos recursivos.</p>
+        </section>
+
+        <section id="ejemplos">
+            <h2>Ejemplos de Algoritmos Recursivos</h2>
+            <div class="algoritmo">
+                <h3>Factorial</h3>
+                <pre><code>
+function factorial(n) {
+  if (n <= 1) return 1;
+  else return n * factorial(n-1);
+}
+                </code></pre>
+            </div>
+
+            <div class="algoritmo">
+                <h3>Fibonacci</h3>
+                <pre><code>
+function fibonacci(n) {
+  if (n <= 1) return n;
+  else return fibonacci(n-1) + fibonacci(n-2);
+}
+                </code></pre>
+            </div>
+
+            <div class="algoritmo">
+                <h3>Torres de Hanói</h3>
+                <pre><code>
+function hanoi(n, origen, destino, auxiliar) {
+  if (n == 1) moverDisco(origen, destino);
+  else {
+    hanoi(n-1, origen, auxiliar, destino);
+    moverDisco(origen, destino);
+    hanoi(n-1, auxiliar, destino, origen);
+  }
+}
+                </code></pre>
+            </div>
+
+            <div class="algoritmo">
+                <h3>Fractales</h3>
+                <p>Ejemplo gráfico de fractal (como el triángulo de Sierpinski).</p>
+                <img src="imagenes/fractal.png" alt="Fractal ejemplo">
+            </div>
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusión</h2>
+            <p>Reflexión sobre la importancia de la recursividad en ciencias computacionales.</p>
+        </section>
+
+        <section id="referencias">
+            <h2>Referencias IEEE</h2>
+            <ol>
+                <li>[1] A. Autor, "Título del libro o artículo," Editorial, Año.</li>
+                <li>[2] B. Autor, "Título del libro o artículo," Editorial, Año.</li>
+                <li>[3] C. Autor, "Título del blog o video educativo," URL, Año.</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Equipo de Recursividad</p>
+    </footer>
 </body>
 </html>
