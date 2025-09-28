@@ -6,12 +6,24 @@ body {
     color: #333;
 }
 
-/* Encabezado */
-header {
-    background: linear-gradient(90deg, #1abc9c, #16a085);
+/* Portada */
+.portada {
+    background: linear-gradient(135deg, #8e44ad, #3498db);
     color: white;
-    padding: 30px;
     text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.portada h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.portada p {
+    font-size: 1.2em;
 }
 
 /* Menú de navegación */
@@ -90,4 +102,3 @@ footer {
     text-align: center;
     padding: 20px;
 }
-
