@@ -8,14 +8,17 @@
 </head>
 <body>
 
-<!-- Encabezado / Portada -->
-<header>
+<!-- Portada -->
+<section id="portada" class="portada">
     <h1>Recursividad en Algoritmos</h1>
     <p>Trabajo en equipo: Juan, María, Pedro</p>
-</header>
+    <p>Explorando conceptos, características y ejemplos prácticos de recursividad en ciencias computacionales.</p>
+</section>
 
 <!-- Menú de navegación -->
 <nav>
+    <a href="#portada">Portada</a>
+    <a href="#introduccion">Introducción</a>
     <a href="#definicion">Definición</a>
     <a href="#procedimientos">Procedimientos</a>
     <a href="#caracteristicas">Características</a>
@@ -32,8 +35,13 @@
     <button onclick="location.href='#conclusion'">Conclusión</button>
 </div>
 
-<!-- Contenido principal -->
 <main>
+    <!-- Introducción -->
+    <section id="introduccion">
+        <h2>Introducción</h2>
+        <p>En este trabajo se analiza la recursividad, un concepto clave en programación que permite a las funciones llamarse a sí mismas para resolver problemas complejos de manera elegante y estructurada. Se presentan ejemplos prácticos como el factorial, Fibonacci, Torres de Hanói y fractales, mostrando su relevancia y aplicaciones en ciencias computacionales.</p>
+    </section>
+
     <!-- Definición -->
     <section id="definicion">
         <h2>Definición de Recursividad</h2>
@@ -67,7 +75,6 @@
     <section id="ejemplos">
         <h2>Ejemplos de Algoritmos Recursivos</h2>
 
-        <!-- Factorial -->
         <div class="algoritmo">
             <h3>Factorial</h3>
             <pre><code>
@@ -79,7 +86,6 @@ function factorial(n) {
             <button onclick="alert('Ejemplo Factorial')">Ver Ejemplo</button>
         </div>
 
-        <!-- Fibonacci -->
         <div class="algoritmo">
             <h3>Fibonacci</h3>
             <pre><code>
@@ -91,7 +97,6 @@ function fibonacci(n) {
             <button onclick="alert('Ejemplo Fibonacci')">Ver Ejemplo</button>
         </div>
 
-        <!-- Torres de Hanói -->
         <div class="algoritmo">
             <h3>Torres de Hanói</h3>
             <pre><code>
@@ -107,7 +112,6 @@ function hanoi(n, origen, destino, auxiliar) {
             <button onclick="alert('Ejemplo Torres de Hanói')">Ver Ejemplo</button>
         </div>
 
-        <!-- Fractales -->
         <div class="algoritmo">
             <h3>Fractales</h3>
             <p>Ejemplo gráfico de fractal como el triángulo de Sierpinski.</p>
@@ -142,3 +146,4 @@ function hanoi(n, origen, destino, auxiliar) {
 
 </body>
 </html>
+
