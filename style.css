@@ -1,52 +1,93 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f4f8;
     color: #333;
 }
 
-header, footer {
-    background-color: #2c3e50;
+/* Encabezado */
+header {
+    background: linear-gradient(90deg, #1abc9c, #16a085);
     color: white;
+    padding: 30px;
     text-align: center;
-    padding: 20px;
 }
 
+/* Menú de navegación */
 nav {
-    background-color: #34495e;
-    padding: 10px;
+    background-color: #2980b9;
     text-align: center;
+    padding: 15px;
 }
 
 nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
 nav a:hover {
-    color: #1abc9c;
+    background-color: #3498db;
 }
 
-section {
-    padding: 20px;
-    margin: 10px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 5px #ccc;
+/* Botones rápidos */
+.botones-rapidos {
+    text-align: center;
+    margin: 20px;
 }
 
-.algoritmo {
-    background-color: #ecf0f1;
-    padding: 10px;
+button {
+    background-color: #e67e22;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
     border-radius: 5px;
-    margin-bottom: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #d35400;
+}
+
+/* Secciones */
+section {
+    padding: 25px;
+    margin: 15px auto;
+    max-width: 900px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Algoritmos */
+.algoritmo {
+    background-color: #fef9f4;
+    padding: 15px;
+    border-left: 5px solid #e67e22;
+    margin-bottom: 20px;
+    border-radius: 5px;
 }
 
 pre {
-    background-color: #bdc3c7;
+    background-color: #ecf0f1;
     padding: 10px;
     border-radius: 5px;
     overflow-x: auto;
 }
+
+/* Pie de página */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
