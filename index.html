@@ -107,15 +107,46 @@ def factorial(n):
 </section>
 
 
-    <!-- Características -->
-    <section id="caracteristicas">
-        <h2>Características de la Recursividad</h2>
-        <ul>
-            <li>Llamada a sí misma</li>
-            <li>Condición de parada (caso base)</li>
-            <li>Uso de memoria en pila</li>
-        </ul>
-    </section>
+   <!-- Características -->
+<section id="caracteristicas">
+    <h2>Características de la Recursividad</h2>
+    
+    <p>La recursividad es una técnica fundamental en programación y algoritmos, y presenta varias características clave que la definen. A continuación se detallan estas características:</p>
+
+    <ol>
+        <li><strong>Caso Base:</strong>
+            <p>Es la condición que detiene la recursión. Sin un caso base, la función recursiva se llamaría indefinidamente, lo que provocaría un desbordamiento de pila.</p>
+            <p><em>Ejemplo:</em> En el cálculo del factorial, el caso base es cuando n = 0, donde 0! = 1.</p>
+        </li>
+        <li><strong>Llamada Recursiva:</strong>
+            <p>Es la parte de la función donde esta se llama a sí misma. Debe ser diseñada de tal manera que se acerque al caso base en cada llamada.</p>
+            <p><em>Ejemplo:</em> En la función de Fibonacci, se llama a la misma función con n−1 y n−2.</p>
+        </li>
+        <li><strong>División del Problema:</strong>
+            <p>La recursividad permite dividir un problema grande en subproblemas más pequeños y manejables. Cada llamada recursiva se ocupa de un subproblema del problema original, simplificando la lógica del algoritmo.</p>
+        </li>
+        <li><strong>Estructura de Datos:</strong>
+            <p>La recursividad es especialmente útil en estructuras de datos jerárquicas, como árboles y grafos. Las operaciones en árboles, como la búsqueda y la inserción, a menudo se implementan de manera recursiva.</p>
+        </li>
+        <li><strong>Memorization (Almacenamiento de Resultados):</strong>
+            <p>En algunos casos, se puede utilizar la técnica de memorization para almacenar los resultados de las llamadas recursivas, lo que mejora la eficiencia. Esto es común en algoritmos de programación dinámica.</p>
+        </li>
+        <li><strong>Complejidad Temporal y Espacial:</strong>
+            <p>La recursividad puede aumentar la complejidad temporal y espacial de un algoritmo debido a las múltiples llamadas a funciones. Es importante analizar la eficiencia de un algoritmo recursivo y, en algunos casos, considerar su implementación iterativa.</p>
+        </li>
+    </ol>
+
+    <h3>Ejemplo Visual</h3>
+    <pre><code>
+factorial(3)
+ └── 3 * factorial(2)
+      └── 2 * factorial(1)
+           └── 1 * factorial(0)
+                └── 1 (caso base)
+    </code></pre>
+</section>
+
+    
 
     <!-- Complejidad -->
     <section id="complejidad">
