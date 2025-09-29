@@ -1,13 +1,13 @@
 /* Estilo general */
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Georgia', serif;
     margin: 0;
     padding: 0;
     background-color: #0d1117;
-    color: #e6edf3;
+    color: #c9d1d9;
 }
 
-/* -------- MENÚ SUPERIOR -------- */
+/* Menú de navegación */
 nav {
     background-color: #161b22;
     text-align: center;
@@ -32,73 +32,72 @@ nav a:hover {
     color: white;
 }
 
-/* -------- PORTADA CON IMAGEN -------- */
-.portada {
-    background: url("imagenes/fondo-programacion.jpg") center/cover no-repeat;
-    position: relative;
+/* Portada */
+header.portada {
     text-align: center;
-    padding: 120px 20px;
-    border-bottom: 3px solid #1b3c73;
-}
-
-/* Filtro oscuro encima de la imagen */
-.portada::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 1;
-}
-
-.portada h1,
-.portada p {
-    position: relative;
-    z-index: 2;
-}
-
-.portada h1 {
-    font-size: 3.2em;
-    margin-bottom: 20px;
-    color: #58a6ff;
-}
-
-.portada p {
-    font-size: 1.2em;
-    margin-bottom: 8px;
-}
-
-/* -------- SECCIONES -------- */
-section {
-    padding: 25px;
-    margin: 15px auto;
-    max-width: 900px;
+    padding: 40px 20px;
     background-color: #161b22;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    border-bottom: 3px solid #58a6ff;
+}
+
+header.portada h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #58a6ff;
+    margin: 0;
+}
+
+header.portada h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+header.portada h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 5px 0 20px;
+}
+
+header.portada p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+/* Secciones */
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #161b22;
+    border-radius: 8px;
+}
+
+section h2 {
+    font-family: 'Poppins', sans-serif;
+    color: #58a6ff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* Imágenes */
+section img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border-radius: 8px;
+    border: 2px solid #58a6ff;
 }
 
 /* Algoritmos */
 .algoritmo {
-    background-color: #0d1117;
-    padding: 15px;
-    border-left: 5px solid #58a6ff;
-    margin-bottom: 20px;
-    border-radius: 5px;
-}
-
-pre {
-    background-color: #1e2229;
-    padding: 10px;
-    border-radius: 5px;
-    overflow-x: auto;
-    color: #f0f6fc;
-}
-
-/* Pie de página */
-footer {
-    background-color: #161b22;
-    color: #8b949e;
-    text-align: center;
-    padding: 20px;
-    margin-top: 30px;
-}
+    background-color:
