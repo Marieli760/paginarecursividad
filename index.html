@@ -26,8 +26,8 @@
     <h1><strong>Recursividad en Algoritmos</strong></h1>
     <h2><strong>Tecnológico de Estudios Superiores de Jocotitlán</strong></h2>
     <h3><strong>División de Ingeniería en Sistemas Computacionales</strong></h3>
-    <p><strong>Alumnos:</strong> Marieli Martínez Doroteo, Dylan Peréz López, Nau Anry Martínez Fermín</p>
-    <p><strong>Docente:</strong> Doctor en C.I. Juan Alberto Antonio Vazquez</p>
+    <p><strong>Alumnos:</strong> Marieli Martínez, Dylan Peréz, Nau Anry Martínez</p>
+    <p><strong>Docente:</strong> Doctor en C.I. Juan Alberto Antonio Velázquez</p>
     <p><strong>Materia:</strong> Estructuras de Datos</p>
 </header>
 
@@ -47,11 +47,65 @@ Esta habilidad permite a los desarrolladores definir una función o método que 
         <img src="imagenes/recursividad.png" alt="Recursividad ejemplo">
     </section>
 
-    <!-- Procedimientos -->
-    <section id="procedimientos">
-        <h2>Procedimientos Recursivos y Aplicaciones</h2>
-        <p>Los procedimientos recursivos se usan para problemas como búsqueda, ordenamiento, estructuras de datos (listas, árboles) y algoritmos matemáticos.</p>
-    </section>
+   <!-- Procedimientos -->
+<section id="procedimientos">
+    <h2>Procedimientos Recursivos</h2>
+    
+    <p>La recursividad es una técnica de programación en la que una función se llama a sí misma para resolver un problema. Los procedimientos recursivos son aquellos que utilizan esta técnica. A continuación, se describen sus características y ejemplos.</p>
+
+    <h3>Características de los Procedimientos Recursivos</h3>
+    <ul>
+        <li><strong>Caso Base:</strong> Es la condición que detiene la recursión. Sin un caso base, la función se llamará indefinidamente, lo que puede llevar a un desbordamiento de pila.</li>
+        <li><strong>Llamada Recursiva:</strong> Es la parte de la función donde se llama a sí misma, generalmente con un argumento modificado que se aproxima al caso base.</li>
+        <li><strong>División del Problema:</strong> Los procedimientos recursivos suelen dividir un problema grande en subproblemas más pequeños y manejables.</li>
+    </ul>
+
+    <h3>Ejemplo de Procedimiento Recursivo</h3>
+    <p>Un ejemplo clásico de recursión es el cálculo del factorial de un número <em>n</em> (denotado como <em>n!</em>):</p>
+    <p>
+        n! = { 1 si n = 0 <br>
+        n × (n − 1)! si n &gt; 0
+    </p>
+    <p>Aquí, el caso base es cuando n = 0, y la llamada recursiva es n × (n − 1)!.</p>
+
+    <pre><code>
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
+    </code></pre>
+
+    <h3>Aplicaciones de la Recursividad</h3>
+    <p>La recursividad tiene numerosas aplicaciones en programación y algoritmos. Algunas de las más comunes son:</p>
+
+    <ul>
+        <li><strong>Búsqueda y Ordenación:</strong>
+            <ul>
+                <li>Búsqueda Binaria: Utiliza recursión para dividir el espacio de búsqueda.</li>
+                <li>Ordenamiento Rápido (Quicksort): Divide la lista en sublistas y aplica el mismo algoritmo.</li>
+            </ul>
+        </li>
+        <li><strong>Problemas Matemáticos:</strong>
+            <ul>
+                <li>Fibonacci: La serie de Fibonacci se puede calcular de manera recursiva.</li>
+                <li>Torres de Hanoi: Un problema clásico que ilustra la recursión.</li>
+            </ul>
+        </li>
+        <li><strong>Estructuras de Datos:</strong>
+            <ul>
+                <li>Árboles: Muchas operaciones en árboles (como la búsqueda o la inserción) se implementan de forma recursiva.</li>
+                <li>Listas Enlazadas: La manipulación de listas puede realizarse de manera recursiva.</li>
+            </ul>
+        </li>
+        <li><strong>Programación Dinámica:</strong>
+            <ul>
+                <li>Algunos problemas se resuelven eficientemente utilizando técnicas recursivas junto con memorization (almacenamiento de resultados de subproblemas).</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
 
     <!-- Características -->
     <section id="caracteristicas">
