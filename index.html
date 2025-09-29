@@ -215,7 +215,7 @@ public class Quicksort {
 </section>
 
 
-   <!-- Ejemplos -->
+  <!-- Ejemplos -->
 <section id="ejemplos">
     <h2>Ejemplos de Algoritmos Recursivos</h2>
 
@@ -223,10 +223,12 @@ public class Quicksort {
         <h3>Factorial</h3>
         <p>El factorial de un número n se calcula multiplicando todos los enteros positivos desde 1 hasta n. El caso base es n = 0, donde 0! = 1.</p>
         <pre><code>
-// función recursiva para factorial
-function factorial(n) {
-  if (n <= 1) return 1; // caso base: factorial de 0 o 1
-  else return n * factorial(n-1); // llamada recursiva
+// función recursiva para factorial en Java
+public class Factorial {
+    public static int factorial(int n) {
+        if (n <= 1) return 1; // caso base
+        else return n * factorial(n - 1); // llamada recursiva
+    }
 }
         </code></pre>
     </div>
@@ -235,10 +237,12 @@ function factorial(n) {
         <h3>Fibonacci</h3>
         <p>La serie de Fibonacci es una secuencia donde cada número es la suma de los dos anteriores. Los casos base son n = 0 y n = 1.</p>
         <pre><code>
-// función recursiva para fibonacci
-function fibonacci(n) {
-  if (n <= 1) return n; // casos base: 0 y 1
-  else return fibonacci(n-1) + fibonacci(n-2); // llamada recursiva sumando los dos anteriores
+// función recursiva para Fibonacci en Java
+public class Fibonacci {
+    public static int fibonacci(int n) {
+        if (n <= 1) return n; // casos base
+        else return fibonacci(n - 1) + fibonacci(n - 2); // llamada recursiva
+    }
 }
         </code></pre>
     </div>
@@ -247,24 +251,30 @@ function fibonacci(n) {
         <h3>Torres de Hanói</h3>
         <p>El problema de las Torres de Hanói consiste en mover n discos de un poste a otro siguiendo ciertas reglas. El caso base es n = 1.</p>
         <pre><code>
-// función recursiva para Torres de Hanói
-function hanoi(n, origen, destino, auxiliar) {
-  if (n == 1) moverDisco(origen, destino); // caso base: mover un disco directamente
-  else {
-    hanoi(n-1, origen, auxiliar, destino); // mover n-1 discos a la torre auxiliar
-    moverDisco(origen, destino);           // mover el disco restante al destino
-    hanoi(n-1, auxiliar, destino, origen); // mover los n-1 discos desde auxiliar al destino
-  }
+// función recursiva para Torres de Hanói en Java
+public class TorresHanoi {
+    public static void hanoi(int n, char origen, char destino, char auxiliar) {
+        if (n == 1) {
+            System.out.println("Mover disco de " + origen + " a " + destino); // caso base
+        } else {
+            hanoi(n - 1, origen, auxiliar, destino); // mover n-1 discos a auxiliar
+            System.out.println("Mover disco de " + origen + " a " + destino);
+            hanoi(n - 1, auxiliar, destino, origen); // mover n-1 discos al destino
+        }
+    }
 }
         </code></pre>
     </div>
 
-    <div class="algoritmo">
-        <h3>Fractales</h3>
-        <p>Los fractales son figuras geométricas que se repiten a diferentes escalas. La recursividad se utiliza para dibujar patrones como el triángulo de Sierpinski.</p>
-        <img src="imagenes/fractal.png" alt="Fractal ejemplo" style="max-width:100%; height:auto;">
-    </div>
+   <div class="algoritmo">
+    <h3>Fractales</h3>
+    <p>Los fractales son figuras geométricas que se repiten a diferentes escalas y presentan auto-similitud, es decir, cada parte del fractal se asemeja al todo. La recursividad es esencial para dibujar fractales, ya que permite que un mismo patrón se repita indefinidamente hasta alcanzar un nivel de detalle deseado.</p>
+    <p>Un ejemplo clásico es el <strong>Triángulo de Sierpinski</strong>, donde un triángulo se divide en cuatro triángulos más pequeños y se elimina el central, repitiendo este proceso recursivamente para cada triángulo restante. Otro ejemplo es el <strong>Conjunto de Koch</strong>, que se utiliza para crear curvas fractales con bordes infinitamente complejos.</p>
+    <p>Los fractales tienen aplicaciones prácticas en gráficos por computadora, simulación de paisajes, generación de texturas, compresión de imágenes y modelado de fenómenos naturales como costas, nubes o árboles.</p>
+    <img src="imagenes/fractal.png" alt="Fractal ejemplo" style="max-width:100%; height:auto;">
+</div>
 </section>
+
 
   <!-- Conclusión -->
 <section id="conclusion">
