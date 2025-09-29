@@ -152,62 +152,131 @@ factorial(3)
 
     
 
-    <!-- Complejidad -->
-    <section id="complejidad">
-        <h2>Complejidad Computacional</h2>
-        <p>La recursividad puede generar complejidad alta si no se diseña correctamente. Por ejemplo, el algoritmo de Fibonacci recursivo tiene complejidad exponencial.</p>
-    </section>
+ <!-- Complejidad -->
+<section id="complejidad">
+    <h2>Complejidad Computacional</h2>
+    
+    <p>La complejidad computacional es una rama de la teoría de la computación que clasifica los problemas según la cantidad de recursos que requieren para ser resueltos, como el tiempo de ejecución y el espacio de memoria. Se mide comúnmente utilizando la notación Big O, que describe el comportamiento del algoritmo en el peor caso.</p>
 
-    <!-- Ejemplos -->
-    <section id="ejemplos">
-        <h2>Ejemplos de Algoritmos Recursivos</h2>
+    <h3>Importancia</h3>
+    <ul>
+        <li><strong>Optimización:</strong> Mejorar el rendimiento de los algoritmos.</li>
+        <li><strong>Escalabilidad:</strong> Evaluar el comportamiento con entradas grandes.</li>
+        <li><strong>Selección de Algoritmos:</strong> Elegir el más adecuado para un problema.</li>
+    </ul>
 
-        <div class="algoritmo">
-            <h3>Factorial</h3>
-            <pre><code>
+    <h3>Notación Big O Común</h3>
+    <ul>
+        <li>O(1): Tiempo constante.</li>
+        <li>O(n): Tiempo lineal.</li>
+        <li>O(n log n): Tiempo logarítmico lineal (ej. Quicksort).</li>
+        <li>O(n²): Tiempo cuadrático (ej. Bubble Sort).</li>
+    </ul>
+
+    <h3>Ejemplo 1: Factorial Recursivo</h3>
+    <pre><code>
+public class Factorial {
+    public static int factorial(int n) {
+        return (n == 0) ? 1 : n * factorial(n - 1);
+    }
+}
+    </code></pre>
+    <p><strong>Complejidad Temporal:</strong> O(n)</p>
+    <p><strong>Complejidad Espacial:</strong> O(n)</p>
+
+    <h3>Ejemplo 2: Búsqueda Lineal</h3>
+    <pre><code>
+public class BusquedaLineal {
+    public static int busquedaLineal(int[] arr, int x) {
+        for (int i : arr) {
+            if (i == x) return i;
+        }
+        return -1;
+    }
+}
+    </code></pre>
+    <p><strong>Complejidad Temporal:</strong> O(n)</p>
+    <p><strong>Complejidad Espacial:</strong> O(1)</p>
+
+    <h3>Ejemplo 3: Quicksort</h3>
+    <pre><code>
+public class Quicksort {
+    public static void quicksort(int[] arr, int low, int high) {
+        if (low < high) {
+            int pi = partition(arr, low, high);
+            quicksort(arr, low, pi - 1);
+            quicksort(arr, pi + 1, high);
+        }
+    }
+}
+    </code></pre>
+    <p><strong>Complejidad Temporal:</strong> O(n log n) (promedio), O(n²) (peor caso)</p>
+    <p><strong>Complejidad Espacial:</strong> O(log n)</p>
+</section>
+
+
+   <!-- Ejemplos -->
+<section id="ejemplos">
+    <h2>Ejemplos de Algoritmos Recursivos</h2>
+
+    <div class="algoritmo">
+        <h3>Factorial</h3>
+        <p>El factorial de un número n se calcula multiplicando todos los enteros positivos desde 1 hasta n. El caso base es n = 0, donde 0! = 1.</p>
+        <pre><code>
+// función recursiva para factorial
 function factorial(n) {
-  if (n <= 1) return 1;
-  else return n * factorial(n-1);
+  if (n <= 1) return 1; // caso base: factorial de 0 o 1
+  else return n * factorial(n-1); // llamada recursiva
 }
-            </code></pre>
-        </div>
+        </code></pre>
+    </div>
 
-        <div class="algoritmo">
-            <h3>Fibonacci</h3>
-            <pre><code>
+    <div class="algoritmo">
+        <h3>Fibonacci</h3>
+        <p>La serie de Fibonacci es una secuencia donde cada número es la suma de los dos anteriores. Los casos base son n = 0 y n = 1.</p>
+        <pre><code>
+// función recursiva para fibonacci
 function fibonacci(n) {
-  if (n <= 1) return n;
-  else return fibonacci(n-1) + fibonacci(n-2);
+  if (n <= 1) return n; // casos base: 0 y 1
+  else return fibonacci(n-1) + fibonacci(n-2); // llamada recursiva sumando los dos anteriores
 }
-            </code></pre>
-        </div>
+        </code></pre>
+    </div>
 
-        <div class="algoritmo">
-            <h3>Torres de Hanói</h3>
-            <pre><code>
+    <div class="algoritmo">
+        <h3>Torres de Hanói</h3>
+        <p>El problema de las Torres de Hanói consiste en mover n discos de un poste a otro siguiendo ciertas reglas. El caso base es n = 1.</p>
+        <pre><code>
+// función recursiva para Torres de Hanói
 function hanoi(n, origen, destino, auxiliar) {
-  if (n == 1) moverDisco(origen, destino);
+  if (n == 1) moverDisco(origen, destino); // caso base: mover un disco directamente
   else {
-    hanoi(n-1, origen, auxiliar, destino);
-    moverDisco(origen, destino);
-    hanoi(n-1, auxiliar, destino, origen);
+    hanoi(n-1, origen, auxiliar, destino); // mover n-1 discos a la torre auxiliar
+    moverDisco(origen, destino);           // mover el disco restante al destino
+    hanoi(n-1, auxiliar, destino, origen); // mover los n-1 discos desde auxiliar al destino
   }
 }
-            </code></pre>
-        </div>
+        </code></pre>
+    </div>
 
-        <div class="algoritmo">
-            <h3>Fractales</h3>
-            <p>Ejemplo gráfico de fractal como el triángulo de Sierpinski.</p>
-            <img src="imagenes/fractal.png" alt="Fractal ejemplo">
-        </div>
-    </section>
+    <div class="algoritmo">
+        <h3>Fractales</h3>
+        <p>Los fractales son figuras geométricas que se repiten a diferentes escalas. La recursividad se utiliza para dibujar patrones como el triángulo de Sierpinski.</p>
+        <img src="imagenes/fractal.png" alt="Fractal ejemplo" style="max-width:100%; height:auto;">
+    </div>
+</section>
 
-    <!-- Conclusión -->
-    <section id="conclusion">
-        <h2>Conclusión</h2>
-        <p>La recursividad es fundamental en ciencias computacionales para simplificar problemas complejos y optimizar soluciones algorítmicas.</p>
-    </section>
+  <!-- Conclusión -->
+<section id="conclusion">
+    <h2>Conclusión</h2>
+    <p>
+        Al estudiar y trabajar con recursividad, hemos comprendido cómo una función puede llamarse a sí misma para resolver problemas de manera más organizada y clara. 
+        Nos dimos cuenta de la importancia de definir un caso base, dividir los problemas en partes más pequeñas y utilizar la recursión en diferentes estructuras de datos y algoritmos. 
+        También vimos cómo evaluar la complejidad de los procesos y elegir la mejor estrategia según el problema. 
+        En conjunto, esta práctica nos ha permitido entender mejor la lógica detrás de los algoritmos y cómo aplicar la recursividad para simplificar tareas que, de otra manera, serían más complicadas.
+    </p>
+</section>
+
 
     <!-- Referencias -->
     <section id="referencias">
