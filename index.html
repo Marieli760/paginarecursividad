@@ -4,91 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recursividad en Algoritmos</title>
-
-    <!-- Fuentes -->
-    <link href="https://fonts.googleapis.com/css2?family=Georgia&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- CSS externo -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Portada -->
-    <header id="portada" class="portada">
-        <h1><strong>Recursividad en Algoritmos</strong></h1>
-        <h2><strong>Tecnológico de Estudios Superiores de Jocotitlán</strong></h2>
-        <h3><strong>División de Ingeniería en Sistemas Computacionales</strong></h3>
-        <p><strong>Alumnos:</strong> Marieli Martínez Doroteo, Dylan Peréz López, Nau Anry Martínez Fermín</p>
-        <p><strong>Docente:</strong> Doctor en C.I. Juan Alberto Antonio Vazquez</p>
-        <p><strong>Materia:</strong> Estructuras de Datos</p>
-    </header>
+<!-- Menú de navegación -->
+<nav>
+    <a href="#portada">Portada</a>
+    <a href="#introduccion">Introducción</a>
+    <a href="#definicion">Definición</a>
+    <a href="#procedimientos">Procedimientos</a>
+    <a href="#caracteristicas">Características</a>
+    <a href="#complejidad">Complejidad</a>
+    <a href="#ejemplos">Ejemplos</a>
+    <a href="#conclusion">Conclusión</a>
+    <a href="#referencias">Referencias</a>
+</nav>
 
-    <!-- Secciones -->
-    <main>
-        <!-- Introducción -->
-        <section id="introduccion">
-            <h2>Introducción</h2>
-            <p>En esta página de trabajo se analiza la recursividad, un concepto clave en programación que permite a las funciones llamarse a sí mismas para resolver problemas complejos de manera elegante y estructurada.</p>
-        </section>
+<!-- Portada -->
+<header id="portada" class="portada">
+    <h1><strong>Recursividad en Algoritmos</strong></h1>
+    <h2><strong>Tecnológico de Estudios Superiores de Jocotitlán</strong></h2>
+    <h3><strong>División de Ingeniería en Sistemas Computacionales</strong></h3>
+    <p><strong>Alumnos:</strong> Marieli Martínez Doroteo, Dylan Peréz López, Nau Anry Martínez Fermín</p>
+    <p><strong>Docente:</strong> Doctor en C.I. Juan Alberto Antonio Vazquez</p>
+    <p><strong>Materia:</strong> Estructuras de Datos</p>
+</header>
 
-        <!-- Definición -->
-        <section id="definicion">
-            <h2>Definición de Recursividad</h2>
-            <p>La recursividad ha dejado su huella en la teoría de la computación y en el ámbito de la inteligencia artificial, siendo esencial para entender aspectos como la complejidad, la creatividad y el razonamiento. Hofstadter (1979) y Cook (1971) han realizado importantes contribuciones que han enriquecido nuestra comprensión de la recursividad y su aplicabilidad en diversos sectores informáticos. 
+<main>
+    <!-- Introducción -->
+    <section id="introduccion">
+        <h2>Introducción</h2>
+        <p>En esta página de trabajo se analiza la recursividad, un concepto clave en programación que permite a las funciones llamarse a sí mismas para resolver problemas complejos de manera elegante y estructurada.</p>
+    </section>
+
+    <!-- Definición -->
+    <section id="definicion">
+        <h2>Definición de Recursividad</h2>
+        <p>La recursividad ha dejado su huella en la teoría de la computación y en el ámbito de la inteligencia artificial, siendo esencial para entender aspectos como la complejidad, la creatividad y el razonamiento. Hofstadter (1979) y Cook (1971) han realizado importantes contribuciones que han enriquecido nuestra comprensión de la recursividad y su aplicabilidad en diversos sectores informáticos. 
 Esta habilidad permite a los desarrolladores definir una función o método que puede referirse a sí mismo para abordar un problema de una forma más efectiva y elegante. Se aplica en una amplia variedad de aplicaciones de tecnología de la información, abarcando desde la manipulación de estructuras de datos hasta la creación de algoritmos avanzados. El pensamiento computacional junto con la recursividad facilita a los alumnos la comprensión del valor de la abstracción al resolver problemas. La competencia en recursividad es vital tanto para formar programadores como para la educación general en tecnologías de la información y comunicaciones [1].
-            </p>
-            <img src="imagenes/recursividad.png" alt="Ejemplo gráfico de recursividad">
-        </section>
+</p>
+        <img src="imagenes/recursividad.png" alt="Recursividad ejemplo">
+    </section>
 
-        <!-- Procedimientos -->
-        <section id="procedimientos">
-            <h2>Procedimientos Recursivos y Aplicaciones</h2>
-            <p>Los procedimientos recursivos se usan para problemas como búsqueda, ordenamiento, estructuras de datos (listas, árboles) y algoritmos matemáticos.</p>
-        </section>
+    <!-- Procedimientos -->
+    <section id="procedimientos">
+        <h2>Procedimientos Recursivos y Aplicaciones</h2>
+        <p>Los procedimientos recursivos se usan para problemas como búsqueda, ordenamiento, estructuras de datos (listas, árboles) y algoritmos matemáticos.</p>
+    </section>
 
-        <!-- Características -->
-        <section id="caracteristicas">
-            <h2>Características de la Recursividad</h2>
-            <ul>
-                <li>Llamada a sí misma</li>
-                <li>Condición de parada (caso base)</li>
-                <li>Uso de memoria en pila</li>
-            </ul>
-        </section>
+    <!-- Características -->
+    <section id="caracteristicas">
+        <h2>Características de la Recursividad</h2>
+        <ul>
+            <li>Llamada a sí misma</li>
+            <li>Condición de parada (caso base)</li>
+            <li>Uso de memoria en pila</li>
+        </ul>
+    </section>
 
-        <!-- Complejidad -->
-        <section id="complejidad">
-            <h2>Complejidad Computacional</h2>
-            <p>La recursividad puede generar complejidad alta si no se diseña correctamente. Por ejemplo, el algoritmo de Fibonacci recursivo tiene complejidad exponencial.</p>
-        </section>
+    <!-- Complejidad -->
+    <section id="complejidad">
+        <h2>Complejidad Computacional</h2>
+        <p>La recursividad puede generar complejidad alta si no se diseña correctamente. Por ejemplo, el algoritmo de Fibonacci recursivo tiene complejidad exponencial.</p>
+    </section>
 
-        <!-- Ejemplos -->
-        <section id="ejemplos">
-            <h2>Ejemplos de Algoritmos Recursivos</h2>
+    <!-- Ejemplos -->
+    <section id="ejemplos">
+        <h2>Ejemplos de Algoritmos Recursivos</h2>
 
-            <div class="algoritmo">
-                <h3>Factorial</h3>
-                <pre><code>
+        <div class="algoritmo">
+            <h3>Factorial</h3>
+            <pre><code>
 function factorial(n) {
   if (n <= 1) return 1;
   else return n * factorial(n-1);
 }
-                </code></pre>
-            </div>
+            </code></pre>
+        </div>
 
-            <div class="algoritmo">
-                <h3>Fibonacci</h3>
-                <pre><code>
+        <div class="algoritmo">
+            <h3>Fibonacci</h3>
+            <pre><code>
 function fibonacci(n) {
   if (n <= 1) return n;
   else return fibonacci(n-1) + fibonacci(n-2);
 }
-                </code></pre>
-            </div>
+            </code></pre>
+        </div>
 
-            <div class="algoritmo">
-                <h3>Torres de Hanói</h3>
-                <pre><code>
+        <div class="algoritmo">
+            <h3>Torres de Hanói</h3>
+            <pre><code>
 function hanoi(n, origen, destino, auxiliar) {
   if (n == 1) moverDisco(origen, destino);
   else {
@@ -97,39 +104,40 @@ function hanoi(n, origen, destino, auxiliar) {
     hanoi(n-1, auxiliar, destino, origen);
   }
 }
-                </code></pre>
-            </div>
+            </code></pre>
+        </div>
 
-            <div class="algoritmo">
-                <h3>Fractales</h3>
-                <p>Ejemplo gráfico de fractal como el triángulo de Sierpinski.</p>
-                <img src="imagenes/fractal.png" alt="Fractal ejemplo">
-            </div>
-        </section>
+        <div class="algoritmo">
+            <h3>Fractales</h3>
+            <p>Ejemplo gráfico de fractal como el triángulo de Sierpinski.</p>
+            <img src="imagenes/fractal.png" alt="Fractal ejemplo">
+        </div>
+    </section>
 
-        <!-- Conclusión -->
-        <section id="conclusion">
-            <h2>Conclusión</h2>
-            <p>La recursividad es fundamental en ciencias computacionales para simplificar problemas complejos y optimizar soluciones algorítmicas.</p>
-        </section>
+    <!-- Conclusión -->
+    <section id="conclusion">
+        <h2>Conclusión</h2>
+        <p>La recursividad es fundamental en ciencias computacionales para simplificar problemas complejos y optimizar soluciones algorítmicas.</p>
+    </section>
 
-        <!-- Referencias -->
-        <section id="referencias">
-            <h2>Referencias IEEE</h2>
-            <ol>
-                <li>[1] J. Smith, "Introducción a la Recursividad", Editorial Académica, 2020.</li>
-                <li>[2] M. Pérez, "Algoritmos Recursivos en Programación", TechBooks, 2021.</li>
-                <li>[3] L. Gómez, "Programación y Complejidad", Universidad XYZ, 2022.</li>
-                <li>[4] K. Johnson, "Fractales y Recursión", Video educativo, YouTube, 2023.</li>
-                <li>[5] A. Rodríguez, "Torres de Hanói: Algoritmos Recursivos", Blog académico, 2021.</li>
-                <li>[6] C. Martínez, "Fibonacci y Recursividad", Revista de Computación, 2020.</li>
-            </ol>
-        </section>
-    </main>
+    <!-- Referencias -->
+    <section id="referencias">
+        <h2>Referencias IEEE</h2>
+        <ol>
+            <li>[1] J. Smith, "Introducción a la Recursividad", Editorial Académica, 2020.</li>
+            <li>[2] M. Pérez, "Algoritmos Recursivos en Programación", TechBooks, 2021.</li>
+            <li>[3] L. Gómez, "Programación y Complejidad", Universidad XYZ, 2022.</li>
+            <li>[4] K. Johnson, "Fractales y Recursión", Video educativo, YouTube, 2023.</li>
+            <li>[5] A. Rodríguez, "Torres de Hanói: Algoritmos Recursivos", Blog académico, 2021.</li>
+            <li>[6] C. Martínez, "Fibonacci y Recursividad", Revista de Computación, 2020.</li>
+        </ol>
+    </section>
+</main>
 
-    <!-- Pie de página -->
-    <footer>
-        <p>© 2025 Equipo de Recursividad</p>
-    </footer>
+<!-- Pie de página -->
+<footer>
+    <p>© 2025 Equipo de Recursividad</p>
+</footer>
+
 </body>
 </html>
