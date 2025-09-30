@@ -40,6 +40,41 @@ nav a:hover {
     padding: 120px 20px;
     border-bottom: 3px solid #1b3c73;
 }
+/* Estilo de Portada */
+.portada {
+    background: linear-gradient(135deg, #4a90e2, #50e3c2); /* degradado elegante */
+    color: #fff;
+    text-align: center;
+    padding: 80px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titulo-principal {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.institucion {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.division {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.info-equipo p {
+    font-size: 1rem;
+    margin: 5px 0;
+    color: #f0f0f0;
+}
 
 /* Filtro oscuro encima de la imagen */
 .portada::before {
