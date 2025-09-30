@@ -1,4 +1,4 @@
-/* ----------------- ESTILO GENERAL ----------------- */
+/* -------- ESTILO GENERAL -------- */
 body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
@@ -7,7 +7,7 @@ body {
     color: #e6edf3;
 }
 
-/* ----------------- MENÚ SUPERIOR ----------------- */
+/* -------- MENÚ SUPERIOR -------- */
 nav {
     background-color: #161b22;
     text-align: center;
@@ -32,9 +32,8 @@ nav a:hover {
     color: white;
 }
 
-/* ----------------- PORTADA CON IMAGEN ----------------- */
+/* -------- PORTADA CON IMAGEN Y DEGRADADO -------- */
 .portada {
-    background: url("imagenes/fondo-programacion.jpg") center/cover no-repeat;
     position: relative;
     text-align: center;
     padding: 120px 20px;
@@ -42,18 +41,13 @@ nav a:hover {
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     color: #fff;
+
+    /* Fondo: degradado oscuro + imagen */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                url("imagenes/fondo-programacion.jpg") center/cover no-repeat;
 }
 
-/* Filtro oscuro sobre la imagen de fondo */
-.portada::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: 1;
-}
-
-/* Texto sobre el filtro */
+/* Texto sobre el fondo */
 .portada h1,
 .portada h2,
 .portada h3,
@@ -93,7 +87,7 @@ nav a:hover {
     color: #e6edf3;
 }
 
-/* ----------------- SECCIONES ----------------- */
+/* -------- SECCIONES -------- */
 section {
     padding: 25px;
     margin: 15px auto;
@@ -103,7 +97,7 @@ section {
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
-/* ----------------- ALGORITMOS ----------------- */
+/* Algoritmos */
 .algoritmo {
     background-color: #0d1117;
     padding: 15px;
@@ -118,20 +112,19 @@ pre {
     border-radius: 5px;
     overflow-x: auto;
     color: #f0f6fc;
-    font-family: 'Courier New', Courier, monospace;
 }
 
-/* ----------------- IMÁGENES EN SECCIONES ----------------- */
+/* Ajuste para imágenes dentro de secciones */
 section img {
-    max-width: 80%;       /* la imagen no excede el 80% del contenedor */
-    height: auto;         /* mantiene proporción */
+    max-width: 80%;   /* la imagen no excede el 80% del contenedor */
+    height: auto;     /* mantiene proporción */
     display: block;
-    margin: 15px auto;    /* centrada vertical y horizontal */
-    border-radius: 8px;   /* esquinas suaves */
+    margin: 15px auto; /* centrada vertical y horizontal */
+    border-radius: 8px; /* esquinas suaves */
     box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* sombra ligera */
 }
 
-/* ----------------- PIE DE PÁGINA ----------------- */
+/* Pie de página */
 footer {
     background-color: #161b22;
     color: #8b949e;
@@ -140,16 +133,3 @@ footer {
     margin-top: 30px;
 }
 
-/* ----------------- EFECTOS ADICIONALES ----------------- */
-/* Transición suave para enlaces e imágenes */
-nav a, section img {
-    transition: all 0.3s ease-in-out;
-}
-
-nav a:hover {
-    transform: scale(1.05);
-}
-
-section img:hover {
-    transform: scale(1.02);
-}
