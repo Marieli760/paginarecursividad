@@ -104,9 +104,10 @@ footer {
 }
 /* Ajuste para imágenes dentro de secciones */
 section img {
-    max-width: 80%;  /* la imagen no excede el 80% del contenedor */
-    height: auto;    /* mantiene proporción */
+    max-width: 80%;   /* la imagen no excede el 80% del contenedor */
+    height: auto;     /* mantiene proporción */
     display: block;
-    margin: 10px auto; /* centrada */
-    border-radius: 5px; /* opcional, esquinas suaves */
+    margin: 15px auto; /* centrada vertical y horizontal */
+    border-radius: 8px; /* esquinas suaves */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); /* sombra ligera */
 }
