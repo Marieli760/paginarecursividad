@@ -300,17 +300,52 @@ public class TorresHanoi {
                 </code></pre>
             </div>
 
-            <div class="algoritmo">
-                <h3>Fractales</h3>
-                <p>
-                    Los fractales son figuras geométricas que se repiten a diferentes escalas y presentan auto-similitud. La recursividad es esencial para dibujar fractales [6].
-                </p>
-                <p>
-                    Ejemplos: <strong>Triángulo de Sierpinski</strong> y <strong>Conjunto de Koch</strong>. Se utilizan en gráficos, simulación, generación de texturas y modelado de fenómenos naturales.
-                </p>
-                <img src="imagenes/fractal.png" alt="Fractal ejemplo" style="max-width:100%; height:auto;">
-            </div>
-        </section>
+           <div class="algoritmo">
+    <h3>Fractales</h3>
+    <p>
+        Los fractales son figuras geométricas que se repiten a diferentes escalas y presentan auto-similitud. 
+        La recursividad es esencial para dibujar fractales [6].
+    </p>
+    <p>
+        Ejemplo: <strong>Triángulo de Sierpinski</strong>. Este fractal se genera dividiendo un triángulo en 
+        sub-triángulos más pequeños de manera recursiva, mostrando cómo un mismo patrón se repite indefinidamente.
+    </p>
+    <!-- Imagen ilustrativa de un fractal -->
+    <img src="imagenes/fractal.png" alt="Fractal ejemplo" style="max-width:100%; height:auto; margin-bottom: 10px;">
+    <pre><code>
+// ejemplo recursivo en Java: Triángulo de Sierpinski
+import java.awt.*;
+import javax.swing.*;
+
+public class Sierpinski extends JPanel {
+    public void paint(Graphics g) {
+        int[] x = {300, 50, 550};   // coordenadas iniciales del triángulo
+        int[] y = {50, 500, 500};
+        dibujarTriangulo(g, 6, x, y); // profundidad 6
+    }
+
+    public void dibujarTriangulo(Graphics g, int nivel, int[] x, int[] y) {
+        if (nivel == 0) {
+            g.drawPolygon(x, y, 3); // caso base: dibujar triángulo
+        } else {
+            // calcular puntos medios de los lados
+            int[] xm = {(x[0]+x[1])/2, (x[1]+x[2])/2, (x[2]+x[0])/2};
+            int[] ym = {(y[0]+y[1])/2, (y[1]+y[2])/2, (y[2]+y[0])/2};
+            
+            // dibujar recursivamente en los 3 triángulos más pequeños
+            dibujarTriangulo(g, nivel-1, new int[]{x[0], xm[0], xm[2]}, new int[]{y[0], ym[0], ym[2]});
+            dibujarTriangulo(g, nivel-1, new int[]{xm[0], x[1], xm[1]}, new int[]{ym[0], y[1], ym[1]});
+            dibujarTriangulo(g, nivel-1, new int[]{xm[2], xm[1], x[2]}, new int[]{ym[2], ym[1], y[2]});
+        }
+    }
+
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Fractal Sierpinski");
+        frame.setSize(600, 600);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.add(new Sierpinski());
+        frame.setVisible(tru
+
 
         <!-- Conclusión -->
         <section id="conclusion">
